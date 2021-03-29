@@ -69,11 +69,11 @@ public class CompanyService {
             company.setCorpName(companyDto.getCorpName());
             company.setDirectorName(companyDto.getDirectorName());
 
-            Address address = new Address();
+            Address address = optionalCompany.get().getAddress();
             address.setHomeNumber(companyDto.getHomeNumber());
             address.setStreet(companyDto.getStreet());
 
-            Address address1 = optionalCompany.get().getAddress();
+            Address address1 = addressRepository.save(address);
 
             company.setAddress(address1);
 
