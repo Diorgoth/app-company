@@ -73,7 +73,7 @@ public class CompanyService {
             address.setHomeNumber(companyDto.getHomeNumber());
             address.setStreet(companyDto.getStreet());
 
-            Address address1 = addressRepository.save(address);
+            Address address1 = optionalCompany.get().getAddress();
 
             company.setAddress(address1);
 

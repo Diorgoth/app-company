@@ -88,7 +88,9 @@ public class WorkerService {
 
         }
 
-        Address address = new Address();
+
+
+        Address address =  optionalWorker.get().getAddress();
 
         address.setStreet(workerDto.getStreet());
         address.setHomeNumber(workerDto.getHomeNumber());
