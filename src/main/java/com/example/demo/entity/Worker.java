@@ -23,7 +23,7 @@ public class Worker {
     @OneToOne
     private Address address;
 
-    @OneToOne
+    @ManyToOne
     private Department department;
 
 }
